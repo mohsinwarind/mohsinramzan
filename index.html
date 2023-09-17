@@ -7,102 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <!-- Add your custom CSS for dark theme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-     <style>
-       body {
-            background-color: #1c1c1c;
-            color: #ffffff;
-             margin: 0;
-    font-family: Arial, sans-serif;
-            user-select: none;
-        }
-
-        /* Set the height of each section to 100vh (viewport height) */
-      .fadeIn {
-            opacity: 0;
-            transition: opacity 3.5s ease-in-out;
-        }
-        .fadeIn.show {
-            opacity: 1;
-        }
-
-        .name-wrapper {
-            position: relative;
-            margin-bottom: 40px;
-        }
-        .name-underline {
-            width: 120px;
-            height: 3px;
-            background-color: #ffffff;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.6s ease-in-out;
-        }
-        .name-wrapper:hover .name-underline {
-            opacity: 1;
-        }
-        .name-text {
-            font-size: 48px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            line-height: 1.2;
-            cursor: pointer;
-            position: relative;
-            z-index: 1;
-            transition: color 0.6s ease-in-out;
-        }
-        .name-text:hover {
-            color: #4c4a42; /* Add your preferred color on hover */
-        }
-
-        .book-cover {
-            max-width: 300px;
-            transition: transform 0.3s ease-in-out, opacity 3.5s ease-in-out; /* Combined transitions */
-        }
-        .book-cover:hover {
-            transform: scale(1.1); /* Adjust the scale factor as desired */
-        }
-          
-        
-    #about h2 {
-        transition: opacity 0.6s ease-in-out; /* Add opacity transition */
-    }
-
-    #about h2:hover {
-        opacity: 0.5; /* Set the desired opacity on hover */
-    }
-
-/* Apply the fade-in transition to elements with the fadeInOnHover class */
-.fadeInOnHover {
-    opacity: 0.7; /* Initial opacity when not hovered */
-    transition: opacity 0.3s ease-in-out; /* Apply the transition effect to opacity property */
-}
-
-/* Change the opacity to 1 when hovered over */
-.fadeInOnHover:hover {
-    opacity: 2;
-}
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+      
 
 
   
-In this code, a new image-wrapper class is added to create a container for the image. This container helps in applying the pop-out effect more precisely. The transition property is added to the image-wrapper class to ensure smooth animation.
 
-When you hover over the image with the image-pop class, it will scale up by 10%, creating a pop-out effect. You can adjust the scale value and transition duration as needed to achieve the desired effect.
-
-Feel free to experiment with the values to achieve the look you want.
-
-
-
-
-
-
-    </style>
 </head>
 <body>
 
@@ -125,11 +36,16 @@ Feel free to experiment with the values to achieve the look you want.
                         <a class="nav-link" href="#certificates">Certificates</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#skills"> Skills</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#publications">Publications</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#social-media">Social Media</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -138,7 +54,8 @@ Feel free to experiment with the values to achieve the look you want.
     <!-- Home Section -->
     <section id="home" class="py-5 text-center">
         <div class="container">
-            <img src="Fractured Nation Cover.png" id="Book Cover" class="img-fluid mb-4 book-cover fadeIn fadeIn" style="max-width: 300px;">
+            <img src="mockup.png" id="BookCoverLarge" class="img-fluid mb-4 book-cover fadeIn fadeIn" style="max-width: 100%;">
+    <img src="Fractured Nation Cover.png" id="BookCoverMobile" class="img-fluid mb-4 book-cover fadeIn fadeIn" style="max-width: 100%; display:;">
             <div class="name-wrapper fadeIn">
               <h1 class="name-text fadeIn">Mohsin Ramzan</h1>
               <div class="name-underline"></div>
@@ -171,12 +88,16 @@ Feel free to experiment with the values to achieve the look you want.
         <div class="text-center">
             <h2>About Me</h2>
             <div class="image-wrapper">
-                <img src="Mohsin.jpeg" alt="Mohsin" class="img-fluid rounded-circle border mb-3 fadeInOnHover" style="width: 300px; height: 300px;">
+                <img src="me.webp" alt="Mohsin" class="img-fluid rounded-circle border mb-3 fadeInOnHover" style="width: 300px; height: 300px;">
             </div>
             <p style="text-align: center;">
                 A quiet wanderer, forever captivated by the world of books,
                 entranced by the realm of web design, and devoted to the art of storytelling.
-               Like a meek boy who finds strength in the power of words, solace in the 
+                Books are my sanctuary, granting refuge from the chaos of reality.
+                Design is my sanctuary, where I craft digital dreams and orchestrate 
+                visual harmonies that resonate with the soul. Writing is my sanctuary,
+                a medium through which I unveil the truths that often go unsaid. 
+                A meek boy who finds strength in the power of words, solace in the 
                 embrace of design, and purpose in the stories woven through existence. 
                 With every turn of a page, every pixel perfectly placed, and every word
                 meticulously chosen,I aspire to find beauty in the ordinary and meaning 
@@ -199,18 +120,21 @@ Feel free to experiment with the values to achieve the look you want.
                 <p>University of Michigan</p>
                 <p><strong>Grade Achieved: 93.16%</strong></p>
                 <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~AXUXBUWHV52V/CERTIFICATE_LANDING_PAGE~AXUXBUWHV52V.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+            <br><br>
             </div>
             <div class="certificate-item">
                 <h4>Introduction to CSS3</h4>
                 <p>University of Michigan</p>
                 <p><strong>Grade Achieved:99.06% </strong></p>
                 <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~RJS82BNTXNHH/CERTIFICATE_LANDING_PAGE~RJS82BNTXNHH.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+            <br><br>
             </div>
             <div class="certificate-item">
                 <h4>Interactivity with JavaScript</h4>
                 <p>University of Michigan</p>
                 <p><strong>Grade Achieved:100% </strong></p>
                 <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~UN78AK3Q2JDA/CERTIFICATE_LANDING_PAGE~UN78AK3Q2JDA.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+                <br><br>
             </div>
             <div class="certificate-item">
                 <h4>Advance Styling with Responsive Design</h4>
@@ -218,13 +142,123 @@ Feel free to experiment with the values to achieve the look you want.
                 <p><strong>Grade Achieved:98.52% </strong></p>
                 <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~AW4NHSAEWFHG/CERTIFICATE_LANDING_PAGE~AW4NHSAEWFHG.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
             </div>
+            <br><br>
+            <div class="certificate-item">
+                <h4>Psyhological First Aid</h4>
+                <p>Johns Hopkins University</p>
+                <p><strong>Grade Achieved:100% </strong></p>
+                <a href="https://www.coursera.org/account/accomplishments/certificate/NRYVHWFAYPDU" target="_blank" class="btn btn-dark">View Certificate</a>
+            </div>
             <!-- Add more certificate items as needed -->
         </div>
     </div>
 </section>
 
+<section class="skills py-5" data-aos="fade-up" id="skills" >
+    <div class="container">
+        <h3 class="text-light text-center">Skills</h3>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="skill">
+                    <h3 class="text-light">HTML</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="skill">
+                    <h3 class="text-light">CSS</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Add more skills as needed -->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="skill">
+                        <h3 class="text-light">Bootstrap</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 83%;">83%</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="skill">
+                            <h3 class="text-light">Responsive Web Designing</h3>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 95%;">95%</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="skill">
+                            <h3 class="text-light">Video Editing</h3>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%;">90%</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="skill">
+                                <h3 class="text-light">Graphic Designing</h3>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 80%;">75%</div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+        </div>
+    </div>
+</section>
 
-
+<section id="projects" class="dark-section">
+    <div class="container">
+        <h2 class="text-light text-center">Projects</h2>
+        <br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="project1.PNG" alt="Project 1">
+                    <h3>Portfolio</h3>
+                    <p>A website showcasing a portfolio, developed using a combination of HTML, CSS, JavaScript, and Bootstrap components.</p>
+                    <a href="#home">Visit website</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="Capture.PNG" alt="Project 2">
+                    <h3>The Wise Kid</h3>
+                    <p> A non-profit organization committed to providing quality education with a strong focus on equity, inclusivity, and community engagement.</p>
+                    <a href="https://thewisekids.000webhostapp.com/" target="_blank">Visit Website</a>
+                </div>
+            </div>
+            
+             <div class="col-md-4">
+                <div class="project-card">
+                    <img src="Project3.PNG" alt="Project 3">
+                    <h3>Video Editing and Graphic Designing</h3>
+                    <p>I have accumulated extensive experience in the realms of video editing and graphic design, making use of cutting-edge tools and software over multiple years.</p>
+                    <a href="project3-details.html">View Channel</a>
+                </div>
+            </div>
+        
+           
+            <!-- Add more project cards as needed -->
+        </div>
+    </div>
+</section>
 
     <!-- Publications Section -->
 <section id="publications" class="py-5 text-center">
@@ -257,7 +291,7 @@ Feel free to experiment with the values to achieve the look you want.
             <a href="https://instagram.com/m_mohhsin?igshid=NjIwNzIyMDk2Mg==" target="_blank" class="btn btn-dark btn-icon">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
-            <a href="https://mohsinramzan999.blogspot.com/?m=1" target="_blank" class="btn btn-secondary btn-icon">
+            <a href="https://mohsinramzan999.blogspot.com/?m=1" target="_blank" class="btn btn-dark btn-icon">
     <i class="fab fa-blogger"></i> Blogger
 </a>
 
@@ -268,6 +302,7 @@ Feel free to experiment with the values to achieve the look you want.
 
 
     <!-- Add Bootstrap JS and other scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
@@ -275,7 +310,12 @@ Feel free to experiment with the values to achieve the look you want.
       $(document).ready(function(){
         $('.fadeIn').addClass('show');
       });
+      
     </script>
+    <script>
+        AOS.init();
+    </script>
+   
 
     
 </body>
