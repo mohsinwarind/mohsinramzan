@@ -1,0 +1,79 @@
+
+/* Animation for the landing page background */
+@keyframes zoomAnimation {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.1); /* Zoom in to 110% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the background */
+#landing-page {
+    background-image: url(22.8.jpg); /* Replace with your local image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 20px;
+    animation: zoomAnimation 20s ; /* Adjust animation duration as needed */
+}
+/* Style for the mission section */
+.mission-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.mission-item:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    cursor: pointer;
+}
+/* CSS for the hover animation */
+.project-card:hover .project-image {
+    transform: scale(1.1); /* Scale the image on hover (adjust the value as needed) */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+
+
+/* Pop-up animation for mission details */
+/*.mission-item p {
+    display: none;
+    position: bottom;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+} */
+
+.mission-item:hover p {
+    display: block;
+    opacity: 1;
+}
+
+/* Style for the principles section */
+.principle-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.principle-item:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    cursor: pointer;
+}
+

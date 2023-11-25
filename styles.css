@@ -1,0 +1,187 @@
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+     margin: 0;
+font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+/* Set the height of each section to 100vh (viewport height) */
+.fadeIn {
+    opacity: 0;
+    transition: opacity 3.5s ease-in-out;
+}
+.fadeIn.show {
+    opacity: 1;
+}
+
+.name-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+}
+.name-underline {
+    width: 120px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+.name-wrapper:hover .name-underline {
+    opacity: 1;
+}
+.name-text {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s ease-in-out;
+}
+.name-text:hover {
+    color: #4c4a42; /* Add your preferred color on hover */
+}
+
+.book-cover {
+    max-width: 100px;
+    transition: transform 0.3s ease-in-out, opacity 3.5s ease-in-out; /* Combined transitions */
+}
+.book-cover:hover {
+    transform: scale(1.1); /* Adjust the scale factor as desired */
+}
+  
+
+#about h2 {
+transition: opacity 0.6s ease-in-out; /* Add opacity transition */
+}
+
+#about h2:hover {
+opacity: 0.5; /* Set the desired opacity on hover */
+}
+
+/* Apply the fade-in transition to elements with the fadeInOnHover class */
+.fadeInOnHover {
+opacity: 0.7; /* Initial opacity when not hovered */
+transition: opacity 0.3s ease-in-out; /* Apply the transition effect to opacity property */
+}
+
+/* Change the opacity to 1 when hovered over */
+.fadeInOnHover:hover {
+opacity: 2;
+}
+
+.skills{
+     font-family: Arial, sans-serif>
+}
+
+.skill {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progress {
+    height: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.progress-bar {
+    background-color: #47525d;
+    border-radius: 5px;
+    text-align: right;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Apply left-to-right animation */
+.progress-bar:hover {
+    width: 100%;
+}
+
+/* Bootstrap classes for responsive design */
+@media (max-width: 767px) {
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Show the large image on screens larger than 767px (adjust as needed) */
+@media (min-width: 768px) {
+    #BookCoverLarge {
+        display: block;
+    }
+    #BookCoverMobile {
+        display: none;
+    }
+}
+
+/* Show the mobile image on screens up to 767px (adjust as needed) */
+@media (max-width: 767px) {
+    #BookCoverLarge {
+        display: none;
+    }
+    #BookCoverMobile {
+        display: block;
+    }
+}
+/* Dark section styling */
+.dark-section {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 60px 0;
+}
+
+/* Project card styling */
+.project-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: #586471;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #49525c;
+}
