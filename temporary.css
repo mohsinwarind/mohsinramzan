@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 50px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: url('Templates/landingpage.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+/* Dark Overlay */
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Text Content */
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Profile Image */
+.profile-image {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.5s ease-in-out;
+}
+
+/* Hover Effect */
+.profile-image:hover .overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Terminal Section */
+.terminal {
+    background-color: black;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #e8c500;
+    font-family: 'Courier New', monospace;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(35, 38, 35, 0.5);
+    padding: 20px;
+}
+
+/* Terminal Header */
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(50, 50, 50, 1);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Dots (like MacOS Terminal) */
+.dots {
+    display: flex;
+    gap: 5px;
+}
+
+.dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+/* Terminal Body */
+.terminal-body {
+    padding: 20px;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Terminal Text */
+.prompt {
+    color:#e8c500;
+    font-weight: bold;
+}
+
+/* Blinking Cursor */
+.cursor {
+    color: #e8c500;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
