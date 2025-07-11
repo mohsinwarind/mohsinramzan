@@ -1,45 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohsin Ramzan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <h1>My Portfolio</h1>
-    </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Mohsin Ramzan</div>
+  
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        🌙
+      </button>
+      
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- TERMINAL HERO -->
+  <section class="terminal-hero">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <span class="circle red"></span>
+        <span class="circle yellow"></span>
+        <span class="circle green"></span>
+        <span class="terminal-title">~/portfolio</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-text" id="terminalText"></div>
+        <div class="terminal-photo">
+            <img src="Templates/Mohsin.png" alt="Mohsin" class="photo" />
+          <!-- You'll add photo manually, e.g., <img src="assets/photo.jpg"> -->
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Landing Section -->
-    <section class="landing">
-        <div class="content">
-            <h1>Your Name</h1>
-            <p>A passionate developer with a love for creativity & technology.</p>
-        </div>
-        <div class="profile-image">
-            <div class="overlay"></div>
-            <img src="Templates/Me.png" alt="My Photo">
-        </div>
-    </section>
+<!-- Section 2 -->
+
+<section id="my-work" class="my-work-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">🚀 My Work</h2>
+      <p class="section-subtitle" data-aos="fade-up">
+        Here’s a quick snapshot of what I’ve built, written, and contributed to:
+      </p>
+  
+      <div class="card-grid">
+        <!-- ✅ Projects Card -->
+        <a href="/projects" class="work-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <!-- Code/Project SVG -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3>Featured Projects</h3>
+          <p>Full-stack apps, creative builds & open source contributions</p>
+          <span class="card-link">View Projects →</span>
+        </a>
+  
+        <!-- ✅ Publications Card -->
+        <a href="/publications" class="work-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <!-- Document/Research SVG -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16v16H4z"></path>
+              <line x1="8" y1="8" x2="16" y2="8"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <line x1="8" y1="16" x2="13" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Publications</h3>
+          <p>AI/ML papers, academic research & technical writing</p>
+          <span class="card-link">Read Papers →</span>
+        </a>
+  
+        <!-- ✅ Extra-Curricular Card -->
+        <a href="/extra" class="work-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <!-- Community/Globe SVG -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3>Extra-Curriculars</h3>
+          <p>Talks, events, nonprofit work & community leadership</p>
+          <span class="card-link">Explore →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
 
 
-    <section class="terminal">
-        <div class="terminal-header">
-            <div class="dots">
-                <span class="red"></span>
-                <span class="yellow"></span>
-                <span class="green"></span>
-            </div>
-            <p>Mohsin@portfolio: ~</p>
-        </div>
-        <div class="terminal-body">
-            <p class="line"><span class="prompt">$</span> <span id="typed-text"></span><span class="cursor">|</span></p>
-        </div>
-    </section>
-    <script src="scripts.js"></script>
-    
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
 </body>
 </html>
