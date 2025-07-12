@@ -32,8 +32,9 @@
     font-family: cursive;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #00ffcc;
+   
   }
+ 
   .nav-links {
     list-style: none;
     display: flex;
@@ -96,36 +97,66 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 /* Theme Toggle Button */
+/* Theme Toggle Button */
 .theme-toggle {
-    font-size: 1.2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #00ffcc;
-    transition: transform 0.3s ease;
-  }
-  .theme-toggle:hover {
-    transform: rotate(20deg);
-  }
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  font-size: 1.3rem;
+  color: #00ffcc;
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+}
+
+/* Toggle Icon Animation */
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.flip {
+  transform: rotateY(180deg);
+}
+
   
   /* Light Theme */
   body.light {
-    background-color: #f7f7f7;
+    background-color: #f4f4f4;
     color: #111;
   }
-  body.light .navbar {
+  body.light .terminal-text{
+    color: white;
+  }
+  body.light .logo{
+    color : #5c6ac4
+  }
+  body.light .navbar  {
     background-color: #ffffff;
   }
   body.light .nav-links a {
-    color: #111;
+    color: #5c6ac4;
   }
-  body.light .nav-links a:hover {
-    color: #00bfa6;
+  body.light .nav-links a:hover  {
+    color: #044c7c;
   }
   
   /* Dark Theme (Default) */
   
-  
+.navbar,
+.nav-links a,
+.logo,
+.section-title,
+.section-subtitle,
+.work-card, 
+.my-work-section {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
     /* Terminal Hero Section */
 .terminal-hero {
     display: flex;
@@ -144,6 +175,11 @@
     width: 100%;
     /* max-width: 1000px; */
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+  }
+  body.light .terminal-window {
+    background-color: #34373d;
+    /* background-color:#102128; */
+    box-shadow: 0 0 20px rgba(92, 106, 196, 0.1);
   }
   .terminal-header {
     background-color: #2b2e3b;
@@ -205,7 +241,30 @@
     color: #fff;
     text-align: center;
   }
-  
+  body.light .my-work-section {
+    background: #f7f7f7;
+    color: #111;
+  }
+  body.light .section-subtitle,
+body.light .section-title,
+body.light .work-card h3,
+body.light .work-card p {
+  color: black;
+}
+body.light .nav-links a {
+  color: #007acc; /* sky blue */
+}
+body.light svg {
+  stroke: #007acc;
+}
+body.light .logo {
+  color: #009e8e; /* subtle teal */
+}
+
+body.light .card-link  {
+  color: #5c6ac4; /* indigo for CTAs */
+}
+
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -280,7 +339,19 @@
     transform: scale(1.15);
     stroke: #00ffff;
   }
-   
+  body.light .work-card{
+    background-color: white;
+    box-shadow: 0 0 10px #042c442f;
+  }
+  body.light .work-card:hover .card-icon svg {
+    stroke: #044c7c; 
+    border-color: #042b44;
+  }
+  body.light .work-card:hover {
+    box-shadow: 0 8px 30px rgba(3, 87, 67, 0.233);
+    border-color:#042b44;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
   /* Responsive */
   @media (max-width: 768px) {
     .terminal-body {
@@ -297,3 +368,67 @@
     }
   }
   
+  /* Highlight Section */
+.highlights-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #0f111a;
+  color: #e5e5e5;
+}
+
+.highlight-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 160px;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ffcc;
+}
+
+.highlight-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card .count {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.highlight-card p {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+
+
+/* Light Theme Compatibility */
+body.light .highlights-section {
+  background: #f4f4f4;
+  color: #111;
+}
+body.light .highlight-card {
+  background: #ffffff;
+  color: #111;
+  border: 1px solid #ccc;
+}
+body.light .highlight-card p {
+  color: #555;
+}
+
+

@@ -26,18 +26,43 @@ const hamburger = document.getElementById("hamburger");
   });
 
   const toggle = document.getElementById("themeToggle");
+  const icon = toggle.querySelector(".toggle-icon");
   const body = document.body;
 
-  // Load theme from localStorage
+  // Load theme preference
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
     body.classList.add("light");
-    toggle.textContent = "🌞";
+    icon.textContent = "🌞";
   }
 
   toggle.addEventListener("click", () => {
     body.classList.toggle("light");
     const isLight = body.classList.contains("light");
-    toggle.textContent = isLight ? "🌞" : "🌙";
+    icon.classList.add("flip");
+
+    // Swap icon
+    icon.textContent = isLight ? "🌞" : "🌙";
     localStorage.setItem("theme", isLight ? "light" : "dark");
+    
+    setTimeout(() => icon.classList.remove("flip"), 300);
   });
+
+  const counters = document.querySelectorAll('.count');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / 100);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+
+  
