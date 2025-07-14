@@ -34,13 +34,14 @@ const hamburger = document.getElementById("hamburger");
   if (savedTheme === "light") {
     body.classList.add("light");
     icon.textContent = "🌞";
+    toggleGitHubTheme("light")
   }
 
   toggle.addEventListener("click", () => {
     body.classList.toggle("light");
     const isLight = body.classList.contains("light");
     icon.classList.add("flip");
-
+    toggleGitHubTheme(isLight ? "light" : "dark");
     // Swap icon
     icon.textContent = isLight ? "🌞" : "🌙";
     localStorage.setItem("theme", isLight ? "light" : "dark");
@@ -65,4 +66,6 @@ const hamburger = document.getElementById("hamburger");
     updateCount();
   });
 
-  
+  function toggleGitHubTheme(theme) {
+    document.getElementById("github-stats-img").src = `https://github-readme-stats.vercel.app/api?username=mohsinwarind&show_icons=true&theme=${theme}`;
+  }
