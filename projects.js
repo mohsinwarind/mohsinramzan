@@ -85,3 +85,18 @@ closeReviewModal.addEventListener('click', () => reviewModal.classList.add('hidd
 window.addEventListener('click', (e) => {
   if (e.target === reviewModal) reviewModal.classList.add('hidden');
 });
+
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const { offsetX, offsetY } = e;
+    const { offsetWidth: w, offsetHeight: h } = card;
+    const rotateX = ((offsetY / h) - 0.5) * 10;
+    const rotateY = ((offsetX / w) - 0.5) * -10;
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+  });
+});
+

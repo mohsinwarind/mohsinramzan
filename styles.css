@@ -1,4 +1,7 @@
-/* Reset & Base */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@400..700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +12,12 @@
     color: #e5e5e5;
     font-family: 'Fira Code', monospace;
     transition: background-color 0.3s ease, color 0.3s ease;
-
+    overflow: hidden;
   }
+  
+[data-scroll-container] {
+  overflow: hidden;
+}
   
   
   /* Navbar */
@@ -31,8 +38,10 @@
   .logo {
     font-family: "Caveat", cursive;
     font-size: 2rem;
-    font-weight: bold;
-   
+    
+  }
+  body.light .logo{
+    color:  #007acc !important;
   }
  
   .nav-links {
