@@ -357,7 +357,7 @@ body.light .card-link  {
   body.light .work-card:hover {
     box-shadow: 0 8px 30px rgba(3, 87, 67, 0.233);
     border-color:#042b44;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease ;
   }
   /* Responsive */
   @media (max-width: 768px) {
@@ -396,7 +396,7 @@ body.light .card-link  {
   padding: 1.5rem;
   border-radius: 1rem;
   width: 160px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }

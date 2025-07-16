@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohsin Ramzan</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
 
 </head>
 <body >
@@ -66,15 +64,15 @@
 
 <section id="my-work" class="my-work-section">
     <div class="container">
-      <h2 class="section-title" data-scroll data-scroll-speed="2">🚀 My Work</h2>
+      <h2 class="section-title" data-aos="fade-down">🚀 My Work</h2>
       <p class="section-subtitle" data-aos="fade-up">
-        Here’s a quick snapshot of what I’ve built, written, and contributed to:
+        _________________________________________________
       </p>
   
       <div class="card-grid">
         <!-- ✅ Projects Card -->
-        <a href="/projects" class="work-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
-          <div class="card-icon">
+        <a href="/projects" class="work-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"  >
             <!-- Code/Project SVG -->
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6"></polyline>
@@ -87,7 +85,7 @@
         </a>
   
         <!-- ✅ Publications Card -->
-        <a href="/publications" class="work-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+        <a href="/publications" class="work-card" data-aos="fade-up" data-aos-delay="200">
           <div class="card-icon">
             <!-- Document/Research SVG -->
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -103,7 +101,7 @@
         </a>
   
         <!-- ✅ Extra-Curricular Card -->
-        <a href="/extra" class="work-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+        <a href="/extra" class="work-card" data-aos="fade-up" data-aos-delay="300">
           <div class="card-icon">
             <!-- Community/Globe SVG -->
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -120,30 +118,30 @@
     </div>
   </section>
   
-  <section class="highlights-section" data-scroll data-scroll-speed="2">
+  <section class="highlights-section">
     <!-- Stats Row -->
     <div class="highlight-row">
-      <div class="highlight-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+      <div class="highlight-card" data-aos="fade-up" data-aos-delay="250">
         <div class="icon">💼</div>
         <div class="count" data-target="10">0</div>
         <p>Projects</p>
       </div>
-      <div class="highlight-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+      <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
         <div class="icon">🏅</div>
         <div class="count" data-target="5">0</div>
         <p>Certificates</p>
       </div>
-      <div class="highlight-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+      <div class="highlight-card" data-aos="fade-up" data-aos-delay="150">
         <div class="icon">📘</div>
         <div class="count" data-target="1">0</div>
         <p>Books</p>
       </div>
-      <div class="highlight-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+      <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
         <div class="icon">📝</div>
         <div class="count" data-target="3">0</div>
         <p>Publications</p>
       </div>
-      <div class="highlight-card" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+      <div class="highlight-card" data-aos="fade-up" data-aos-delay="50">
         <div class="icon">💻</div>
         <div class="count" data-target="2">0</div>
         <p>Years Experience</p>
@@ -152,9 +150,9 @@
   </section>
 
   
-  <section class="grid-layout" data-scroll data-scroll-speed="2">
+  <section class="grid-layout">
     <!-- GitHub Stats -->
-    <div class="card github glass" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+    <div class="card github glass" data-aos="fade-up" >
       <h3>GitHub Overview</h3>
       <p>I love building with Python, AI, and open-source tech. Here's how I roll on GitHub:</p>
       <img id="github-stats-img" class="github-stats"
@@ -165,9 +163,9 @@
     </div>
   
     <!-- Technologies & Tools -->
-    <div class="card tech glass">
+    <div class="card tech glass" data-aos="fade-up" data-aos-delay="250">
       <h3>Technologies & Tools</h3>
-      <div class="tech-icons" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+      <div class="tech-icons">
         <!-- Programming Languages -->
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
@@ -233,7 +231,7 @@
   
   
   <footer class="footer">
-    <div class="footer-container" data-scroll data-scroll-delay="0.1" data-scroll-speed="1">
+    <div class="footer-container" data-aos="fade-up" data-aos-delay="250">
   
       <!-- Logo + Name -->
       <div class="footer-left">
@@ -286,22 +284,14 @@
   </footer>
   
   <script src="scripts.js"></script>
-  <script>
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-      lerp: 0.1,
-    });
-  </script>
-  
-  <!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   
 <script>
   AOS.init({
     duration: 1000,
     once: true,
   });
-</script> -->
+</script>
 
 </body>
 </html>
